@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clearview | Search</title>
+  <link rel="icon" href="img/img1.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <img src="img/img1.jpg" alt="Icon" class="icon-img" />
+  <div class="container" style="margin-top:5rem; max-width: 500px; flex-direction: column;">
+    <h2 style="color:#007BFF; text-align:center; margin-bottom:1.5rem;">Search Reviews by Product</h2>
+    <form id="searchForm" style="width: 100%;">
+      <input type="text" id="searchQuery" placeholder="Enter product name..." required style="padding: 0.65rem 1rem; width: 100%; border-radius: 10px; font-size: 1rem; border: 2px solid #98FF98; background: #000000; color: #FFC0CB;" />
+      <button type="submit" style="margin-top: 1rem; width: 100%; background: #007BFF; color:#000;">Search</button>
+    </form>
+    <div id="results"></div>
+    <button id="backChoice" style="background:#007BFF; margin-top:1.5rem; width: 100%; color:#000;">Back</button>
+  </div>
+  <script src="js/script.js"></script>
+  <script>
+    document.getElementById('backChoice').addEventListener('click', () => window.location.href='choice.html');
+  </script>
+</body>
+</html>

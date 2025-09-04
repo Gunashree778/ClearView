@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0; 
+  padding: 0;
+  background: #000000; /* Jet Black background */
+  min-height: 100vh;
+  color: #FFC0CB; /* Soft Pink text */
+}
+
+/* Navbar */
+nav {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+nav li a {
+  color: #FFC0CB; /* Soft Pink for link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: #98FF98; /* Mint Green on hover */
+}
+
+/* Icon top-left */
+.icon-img {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #007BFFaa; /* Electric Blue glow */
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 6rem auto 2rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 3rem;
+  color: #FFC0CB; /* Soft Pink text */
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 5rem);
+  position: relative;
+}
+
+/* Left welcome text */
+.left-welcome {
+  flex: 1;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #98FF98; /* Mint Green text */
+  text-shadow: 0 0 4px #007BFFcc;
+}
+
+/* Right hero image */
+.hero-image {
+  flex: 1;
+  max-width: 600px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 25px #007BFF88;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(90deg, #007BFF 0%, #98FF98 100%);
+  border: none;
+  border-radius: 40px;
+  padding: 0.7rem 2rem;
+  color: #000000; /* Black text on buttons */
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px #007BFFbb;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #98FF98 0%, #007BFF 100%);
+  box-shadow: 0 10px 25px #98FF98cc;
+  transform: translateY(-3px);
+}
+
+/* Forms styling */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #001f3f; /* Dark Electric Blue background */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 30px #007BFFcc;
+  color: #FFC0CB; /* Soft Pink text */
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #98FF98; /* Mint Green labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid #98FF98; /* Mint Green border */
+  border-radius: 10px;
+  background-color: #001f3f;
+  color: #FFC0CB;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #007BFF; /* Electric Blue on focus */
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: inherit;
+}
+
+/* Messages */
+#message {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.8rem;
+  min-height: 1.3rem;
+  color: #FFC0CB;
+}
+
+#message.success {
+  color: #98FF98;
+}
+
+/* Feedback entries */
+#results {
+  margin-top: 1.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #001f3f;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 25px #007BFFcc;
+}
+
+.feedback-entry {
+  border-bottom: 1px solid #004080;
+  padding: 0.75rem 0;
+}
+
+.feedback-entry:last-child {
+  border-bottom: none;
+}
+
+.feedback-entry strong {
+  color: #98FF98;
+  font-weight: 700;
+}
+
+.feedback-entry p {
+  margin: 0.3rem 0 0;
+  font-size: 0.95rem;
+  color: #FFC0CB;
+}
+
+.feedback-entry small {
+  color: #90ee90cc;
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 3px;
+}
+
+/* Back button overrides */
+#backChoice {
+  background: #007BFF;
+  box-shadow: 0 8px 20px #007bffcc;
+  width: 100%;
+  max-width: 400px;
+  margin: 1.5rem auto 0;
+  color: #000000;
+}
+
+#backChoice:hover {
+  background: #98FF98;
+  box-shadow: 0 12px 28px #98FF9899;
+  transform: translateY(-3px);
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .container {
+    flex-direction: column;
+    margin-top: 5rem;
+    padding: 0 1.5rem;
+    min-height: auto;
+  }
+  .left-welcome,
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    justify-content: center;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .left-welcome {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+}
+
+/* image styles.css */
+.feedback-entry img {
+  display: block;
+  margin-top: 8px;
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+}

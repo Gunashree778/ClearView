@@ -1,0 +1,48 @@
+<!-- public/register.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clearview | Register</title>
+  <link rel="icon" href="img/img1.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
+
+  <img src="img/img1.jpg" alt="Icon" class="icon-img" />
+
+  <div class="container" style="flex-direction: column; min-height:auto;">
+    <img src="img/img3.jpg" alt="Clearview Logo" style="width: 260px; margin-bottom: 1rem; align-self: center;" />
+
+    <form id="registerForm" style="max-width: 400px; background: #001f3f; padding: 2rem; border-radius: 16px; box-shadow: 0 0 25px #007BFFcc; color: #FFC0CB;">
+      <h2 style="text-align:center; color:#007BFF; margin-bottom:1.5rem;">Create an Account</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <button type="submit">Register</button>
+      <div id="message"></div>
+    </form>
+
+    <p style="margin-top:1rem; color:#98FF98; font-size: 0.9rem; text-align:center;">
+      Already registered? <a href="index.html" style="color:#007BFF;">Login here</a>
+    </p>
+
+    <img src="img/img5.jpg" alt="Device Setup" style="margin-top: 2rem; border-radius: 10px; box-shadow: 0 0 20px #007BFFcc; width: 100%; max-width: 600px; align-self: center;" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!-- public/choice.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clearview | Choose</title>
+  <link rel="icon" href="img/img1.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #007BFF 0%, #98FF98 100%);
+      color: #FFC0CB;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      box-shadow: 0 15px 40px #007BFFaa;
+      padding: 3rem 4rem;
+      max-width: 700px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .left-text {
+      flex: 1 1 200px;
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #FFC0CB;
+      text-shadow: 0 0 4px #000000cc;
+    }
+    .buttons {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    button {
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 1rem 3rem;
+      border-radius: 40px;
+      background: #001f3f;
+      box-shadow: 0 0 15px 5px #98FF98cc;
+      border: none;
+      color: #FFC0CB;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 140px;
+    }
+    button:hover {
+      background: #98FF98;
+      color: #000000;
+      box-shadow: 0 0 25px 15px #007BFFcc;
+      transform: translateY(-4px);
+    }
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        padding: 2rem;
+      }
+      .left-text, .buttons {
+        flex: 1 1 100%;
+        text-align: center;
+      }
+      .left-text {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="img/img1.jpg" alt="Icon" class="icon-img" />
+  <div class="container">
+    <div class="left-text">Where do you want to go?</div>
+    <div class="buttons">
+      <button id="toSearch">Search Page</button>
+      <button id="toFeedback">Feedback Page</button>
+    </div>
+  </div>
+  <script>
+    // On page load check if user is logged in, else redirect to login
+    const username = localStorage.getItem('username');
+    if (!username) {
+      window.location.href = 'index.html';
+    }
+
+    document.getElementById('toSearch').addEventListener('click', () => {
+      window.location.href = 'search.html';
+    });
+    document.getElementById('toFeedback').addEventListener('click', () => {
+      window.location.href = 'feedback.html';
+    });
+  </script>
+</body>
+</html>

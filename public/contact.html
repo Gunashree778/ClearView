@@ -1,0 +1,184 @@
+<!-- public/contact.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clearview | Contact</title>
+  <link rel="icon" href="img/img1.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .content {
+      max-width: 1000px;
+      margin: 6rem auto 3rem;
+      padding: 0 2rem;
+      color: #FFC0CB;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+    h1 {
+      color: #007BFF;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      width: 100%;
+      text-align: center;
+    }
+    form {
+      background: #001f3f;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 25px #007BFFcc;
+      flex: 1;
+    }
+    label {
+      color: #98FF98;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      border: 2px solid #98FF98;
+      background-color: #000000;
+      color: #FFC0CB;
+      font-size: 1rem;
+      resize: vertical;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+    }
+    button {
+      background: linear-gradient(90deg, #007BFF 0%, #98FF98 100%);
+      border: none;
+      border-radius: 30px;
+      color: #000000;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 0.8rem 2rem;
+      box-shadow: 0 8px 20px #007BFFcc;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #98FF98 0%, #007BFF 100%);
+      box-shadow: 0 12px 30px #98FF9899;
+      transform: translateY(-3px);
+    }
+    /* Contact info container without box background */
+    .contact-info {
+      flex: 1;
+      color: #FFC0CB;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .contact-info h2 {
+      color: #007BFF;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .contact-item {
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .contact-item strong {
+      color: #98FF98;
+      min-width: 100px;
+      font-weight: 600;
+      display: inline-block;
+    }
+    iframe {
+      width: 100%;
+      height: 280px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 0 25px #007BFFcc;
+      display: block;
+    }
+    #message {
+      font-weight: 600;
+      text-align: center;
+      margin-top: 0.8rem;
+      min-height: 1.3rem;
+      color: #FFC0CB;
+    }
+    #message.success {
+      color: #98FF98;
+    }
+    @media (max-width: 860px) {
+      .content {
+        flex-direction: column;
+        margin: 6rem 1rem 2rem;
+        align-items: center;
+      }
+      form, .contact-info {
+        width: 100%;
+      }
+      iframe {
+        height: 220px;
+      }
+      .contact-item strong {
+        min-width: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <img src="img/img1.jpg" alt="Icon" class="icon-img" />
+  <div class="content">
+    <form id="contactForm">
+      <h1>Contact Us</h1>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      <label for="messageInput">Message:</label>
+      <textarea id="messageInput" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+      <button type="submit">Send Message</button>
+      <div id="message"></div>
+    </form>
+    <div class="contact-info">
+      <h2>Contact Info</h2>
+      <div class="contact-item">
+        <strong>Address:</strong>
+        <span>123 Clearview St., Tech City, CA 90001, USA</span>
+      </div>
+      <div class="contact-item">
+        <strong>Phone:</strong>
+        <span>+1 (555) 123-4567</span>
+      </div>
+      <div class="contact-item">
+        <strong>Email:</strong>
+        <span>support@clearview.com</span>
+      </div>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.473212474156!2d-118.28932148478339!3d34.02073098060887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c0b11ea3975f%3A0xf65c5f737d0a9d9d!2sDowntown%20Los%20Angeles%2C%20Los%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1693107600000!5m2!1sen!2sus" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" 
+        title="Clearview Location on Map">
+      </iframe>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

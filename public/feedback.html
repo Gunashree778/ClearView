@@ -1,0 +1,162 @@
+<!-- public/feedback.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clearview | Feedback</title>
+  <link rel="icon" href="img/img1.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      background-color: #000000;
+      color: #FFC0CB;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      margin-top: 3rem;
+      max-width: 480px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .brand {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #007BFF;
+      text-shadow: 0 0 8px #007BFFaa;
+      margin-bottom: 0;
+      user-select: none;
+    }
+    h2 {
+      color: #007BFF;
+      text-align: center;
+      margin: 0;
+    }
+    form {
+      background: #001f3f;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 20px #007BFFcc;
+      color: #FFC0CB;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: 600;
+      color: #98FF98;
+    }
+    input[type="text"],
+    textarea,
+    input[type="file"],
+    select {
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      border: 2px solid #98FF98;
+      background-color: #000000;
+      color: #FFC0CB;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #007BFF;
+    }
+    button[type="submit"] {
+      background: linear-gradient(90deg, #007BFF 0%, #98FF98 100%);
+      border: none;
+      border-radius: 40px;
+      padding: 0.8rem 2rem;
+      color: #000000;
+      font-weight: 700;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px #007BFFbb;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background: linear-gradient(90deg, #98FF98 0%, #007BFF 100%);
+      box-shadow: 0 10px 25px #98FF98cc;
+      transform: translateY(-3px);
+    }
+    #backChoice {
+      background: #007BFF;
+      color: #000000;
+      border: none;
+      padding: 0.8rem 3rem;
+      border-radius: 40px;
+      box-shadow: 0 8px 20px #007BFFcc;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 480px;
+    }
+    #backChoice:hover {
+      background: #98FF98;
+      box-shadow: 0 12px 28px #98FF9899;
+      transform: translateY(-3px);
+    }
+    #message {
+      text-align: center;
+      font-weight: 600;
+      min-height: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+  <img src="img/img1.jpg" alt="Icon" class="icon-img" style="position: fixed; top: 10px; left: 15px; width: 40px; height: 40px; border-radius: 5px; box-shadow: 0 0 10px #007BFFaa;" />
+  <div class="container">
+    <div class="brand">Clearview</div>
+    <h2>Submit Feedback</h2>
+    <form id="feedbackForm" enctype="multipart/form-data">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" readonly />
+
+      <label for="product">Product Name:</label>
+      <input type="text" id="product" name="product" required />
+      
+      <label for="brand">Brand Name:</label>
+      <input type="text" id="brand" name="brand" required />
+      
+      <label for="app">App:</label>
+      <input type="text" id="app" name="app" required />
+
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="" disabled selected>Select rating</option>
+        <option value="1">1 - Very Poor</option>
+        <option value="2">2 - Poor</option>
+        <option value="3">3 - Average</option>
+        <option value="4">4 - Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+      
+      <label for="opinion">Your Opinion:</label>
+      <textarea id="opinion" name="opinion" rows="5" required></textarea>
+
+      <label for="image">Upload Image (jpg/png):</label>
+      <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" />
+      
+      <button type="submit">Submit Feedback</button>
+      <div id="message"></div>
+    </form>
+    <button id="backChoice">Back</button>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
